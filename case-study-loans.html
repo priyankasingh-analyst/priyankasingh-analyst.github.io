@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: Bank Loan Applications Dashboard — Priyanka Singh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-mark">Priyanka<span>.</span></a>
+    <a href="index.html#projects" class="back-link">← Back to projects</a>
+  </div>
+</header>
+
+<main>
+  <section class="cs-hero">
+    <div class="wrap">
+      <p class="cs-eyebrow mono">Case Study · Reporting &amp; Risk Analytics</p>
+      <h1>Bank Loan Applications Dashboard</h1>
+      <p class="cs-tools">Excel · Pivot Tables · Power Query</p>
+      <div class="cs-kpis">
+        <span class="cs-kpi">14.4K applications</span>
+        <span class="cs-kpi">$169M funded</span>
+        <span class="cs-kpi">$183.5M received</span>
+        <span class="cs-kpi">84% good loan rate</span>
+        <span class="cs-kpi">12.30% avg interest</span>
+        <span class="cs-kpi">13.35% avg DTI</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="cs-section-tag">Business Problem</span>
+      <h2>Loan performance was tracked, but not in one place</h2>
+      <p>A bank's lending operations team was issuing thousands of loans a month across products like debt consolidation, credit cards, home improvement, and major purchases. Application data existed, but performance metrics — good vs. bad loans, interest rate spread, funding gaps, and borrower risk profile — were not consolidated anywhere a manager could review at a glance.</p>
+      <p>Without a single reporting view, it was hard to answer basic operational questions quickly: which loan purposes were riskiest, which states had the highest application volume, and whether interest rates were in line with borrower risk (debt-to-income ratio).</p>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="cs-section-tag">Approach</span>
+      <h2>From raw records to a governance-ready dashboard</h2>
+      <ol class="cs-steps">
+        <li><div><strong>Collected and validated the dataset.</strong> Started with 14.4K loan application records covering loan grade, purpose, term, employee experience, state, and interest rate.</div></li>
+        <li><div><strong>Cleaned inconsistencies.</strong> Standardized loan grade categories (A–G), fixed term formatting (36 vs. 60 months), and removed duplicate or incomplete application rows.</div></li>
+        <li><div><strong>Built Pivot Tables to segment performance.</strong> Broke down applications by grade, purpose, employee experience bracket, and issuing state to see where volume and risk concentrated.</div></li>
+        <li><div><strong>Used Power Query to calculate KPIs.</strong> Computed total funded amount ($169M), total amount received ($183.5M), average interest rate (12.30%), and average debt-to-income ratio (13.35%).</div></li>
+        <li><div><strong>Separated good vs. bad loan cohorts.</strong> Classified loans as "good" (current, fully paid) or "bad" (charged off) to isolate the 84% good loan rate from the 16% at-risk segment.</div></li>
+        <li><div><strong>Mapped geographic and term-based trends.</strong> Layered in a state-level heat map and a 36-vs-60-month term split to spot regional and structural risk patterns.</div></li>
+        <li><div><strong>Published an interactive dashboard.</strong> Added grade and purpose filters so loan officers and managers could slice the report themselves without needing a rebuild each time.</div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="cs-section-tag">Key Insights</span>
+      <h2>What the numbers showed</h2>
+      <div class="cs-insights">
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">84% vs. 16%</span>
+          <p>Good loans (12.1K applications, $167.2M received) outnumbered bad loans (2.3K applications, $16.2M received) more than 5 to 1.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">66% / 34%</span>
+          <p>Two-thirds of applications were on 36-month terms versus 60-month, suggesting most borrowers preferred shorter repayment windows.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">3.5K applications</span>
+          <p>Borrowers with 10+ years of employment experience submitted the largest single volume of applications — over double the next bracket.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">Debt consolidation &amp; credit card</span>
+          <p>These two purposes made up the largest share of loan applications by far, well ahead of home improvement or major purchases.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">852 → 1,736</span>
+          <p>Monthly loan applications more than doubled from January to December, showing consistent month-over-month growth across the year.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">15% / 14% / 12%</span>
+          <p>Interest rates varied by loan status — current loans carried the highest average rate, ahead of charged-off and fully paid loans.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" style="border-bottom:none;">
+    <div class="wrap">
+      <span class="cs-section-tag">Recommendations</span>
+      <h2>What the business should do next</h2>
+      <ul class="cs-reco-list">
+        <li>Investigate the 16% bad loan segment by purpose and term to see if specific loan types (e.g. debt consolidation on 60-month terms) are systematically riskier, and tighten underwriting criteria there.</li>
+        <li>Monitor the rising monthly application trend (852 to 1,736) against staffing and funding capacity to avoid processing bottlenecks as volume grows.</li>
+        <li>Review why current loans carry a higher average interest rate than fully paid ones — this could signal repricing opportunities or early identification of at-risk accounts.</li>
+        <li>Use the state-level concentration data to prioritize regional risk teams in the highest-volume states rather than spreading review capacity evenly.</li>
+        <li>Continue refreshing the dashboard monthly so risk and operations teams can catch shifts in the good-loan rate before they compound.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="cs-footer-nav wrap">
+    <a href="index.html#projects" class="btn btn-ghost">← Back to all projects</a>
+    <a href="case-study-blinkit.html" class="btn btn-primary">Next case study →</a>
+  </div>
+</main>
+
+</body>
+</html>
+
