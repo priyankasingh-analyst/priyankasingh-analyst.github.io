@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: Employee Attrition Analysis — Priyanka Singh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-mark">Priyanka<span>.</span></a>
+    <a href="index.html#projects" class="back-link">← Back to projects</a>
+  </div>
+</header>
+
+<main>
+  <section class="cs-hero">
+    <div class="wrap">
+      <p class="cs-eyebrow mono">Case Study · HR &amp; Workforce Analytics</p>
+      <h1>Employee Attrition Analysis</h1>
+      <p class="cs-tools">Excel · Power BI · DAX</p>
+      <div class="cs-kpis">
+        <span class="cs-kpi">1K employees</span>
+        <span class="cs-kpi">137 attrition count</span>
+        <span class="cs-kpi">12.64% attrition rate</span>
+        <span class="cs-kpi">₹7.44K avg salary</span>
+        <span class="cs-kpi">7.93 avg tenure</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="cs-section-tag">Business Problem</span>
+      <h2>Retention efforts were reactive, not targeted</h2>
+      <p>HR was losing employees at a steady pace but had no structured way to see which departments, roles, or employee segments were most at risk. Retention initiatives were being applied broadly across the company rather than focused on the groups actually driving the attrition rate, wasting effort and budget on employees who were unlikely to leave anyway.</p>
+      <p>The goal was to turn a raw 1,000-employee HR dataset into a clear picture of where attrition was concentrated and why, so retention strategy could be targeted rather than guessed at.</p>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="cs-section-tag">Approach</span>
+      <h2>From HR records to a retention risk map</h2>
+      <ol class="cs-steps">
+        <li><div><strong>Structured the raw HR dataset.</strong> Organized records for 1,000 employees across department, job role, education field, marital status, tenure, and business travel frequency.</div></li>
+        <li><div><strong>Defined the core attrition metric.</strong> Calculated a headline attrition rate of 12.64%, based on 137 employees who left out of the total workforce.</div></li>
+        <li><div><strong>Segmented attrition by department and role.</strong> Broke down the 137 exits by department (Research &amp; Development, Sales, HR) and by specific job role to find concentration points.</div></li>
+        <li><div><strong>Layered in demographic and lifestyle factors.</strong> Cross-referenced attrition against gender, marital status, education field, and years at the company.</div></li>
+        <li><div><strong>Analyzed work-life balance and travel data.</strong> Compared attrition counts across work-life balance ratings (1–4) and travel frequency categories to test whether they correlated with exits.</div></li>
+        <li><div><strong>Built an age and department filter panel.</strong> Added interactive filters (age range, years at company, department) so HR could isolate specific employee segments on demand.</div></li>
+        <li><div><strong>Published KPI cards for quick reads.</strong> Surfaced total employees (1K), attrition count (137), attrition rate (12.64%), average salary (₹7.44K), and average tenure (7.93 years) as top-line metrics.</div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="cs-section-tag">Key Insights</span>
+      <h2>What the numbers showed</h2>
+      <div class="cs-insights">
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">Sales Executives: 46 exits</span>
+          <p>This single role accounted for the largest share of attrition by job role, well ahead of Laboratory Technicians (30) and Research Scientists (23).</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">R&amp;D: 74 exits</span>
+          <p>Research &amp; Development was the highest-attrition department, ahead of Sales (58) and far ahead of HR (5) — the opposite of what role-level data alone would suggest.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">Work-life balance = 3</span>
+          <p>Employees rating their work-life balance a 3 out of 4 had the highest attrition count (72), more than double the next-highest rating band.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">Travel_Rarely: 90 exits</span>
+          <p>Counterintuitively, employees who rarely traveled for business made up the largest share of attrition — more than double frequent travelers (39).</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">66.4% male</span>
+          <p>Of the 137 employees who left, 91 were male and 46 were female — a gender split worth watching for underlying causes.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">Life Sciences: 58 exits</span>
+          <p>Employees with a Life Sciences education background left at nearly double the rate of the next most common field, Medical (37).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" style="border-bottom:none;">
+    <div class="wrap">
+      <span class="cs-section-tag">Recommendations</span>
+      <h2>What HR should do next</h2>
+      <ul class="cs-reco-list">
+        <li>Prioritize retention interviews and stay-conversations with Sales Executives and R&amp;D staff first, since they account for the largest concentration of exits by role and department respectively.</li>
+        <li>Investigate the "Travel_Rarely" attrition spike specifically — it runs counter to the common assumption that frequent travel drives burnout and exits, and deserves a root-cause review rather than a generic wellness fix.</li>
+        <li>Re-examine what a work-life balance score of "3" actually means to employees, since it drove more attrition than either the lowest (1) or highest (4) ratings — the relationship isn't linear.</li>
+        <li>Build a targeted retention track for early-tenure Life Sciences hires, given their outsized share of exits relative to other education backgrounds.</li>
+        <li>Set up a quarterly refresh of this dashboard so HR can catch early shifts in attrition concentration before the annual numbers move.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="cs-footer-nav wrap">
+    <a href="case-study-blinkit.html" class="btn btn-ghost">← Previous case study</a>
+    <a href="index.html#projects" class="btn btn-primary">Back to all projects →</a>
+  </div>
+</main>
+
+</body>
+</html>
