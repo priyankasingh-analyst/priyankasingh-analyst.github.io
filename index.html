@@ -3,59 +3,127 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Priyanka Singh | Business Analyst Portfolio</title>
 
 <style>
 
+/* ---------------- GLOBAL ---------------- */
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:#f4f6f9;
 color:#333;
-line-height:1.6;
-}
-
-header{
-background:#0A66C2;
-color:white;
-text-align:center;
-padding:50px 20px;
-}
-
-header h1{
-margin:0;
-font-size:40px;
-}
-
-header h2{
-margin-top:10px;
-font-weight:normal;
-}
-
-section{
-background:white;
-max-width:900px;
-margin:25px auto;
-padding:25px;
-border-radius:12px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+scroll-behavior:smooth;
 }
 
 h2{
 color:#0A66C2;
 border-bottom:2px solid #0A66C2;
-padding-bottom:8px;
+display:inline-block;
+padding-bottom:5px;
 }
 
-ul{
-padding-left:20px;
+/* ---------------- HEADER ---------------- */
+header{
+background:linear-gradient(135deg,#0A66C2,#083d77);
+color:white;
+text-align:center;
+padding:70px 20px;
+animation:fadeDown 1s ease;
 }
 
-li{
-margin-bottom:10px;
+header h1{
+font-size:46px;
+margin:0;
 }
 
+header h2{
+font-weight:400;
+margin-top:10px;
+}
+
+.badge{
+display:inline-block;
+background:rgba(255,255,255,0.15);
+padding:6px 12px;
+border-radius:20px;
+margin:5px;
+font-size:12px;
+transition:0.3s;
+}
+
+.badge:hover{
+transform:scale(1.1);
+background:white;
+color:#0A66C2;
+}
+
+/* ---------------- SECTIONS ---------------- */
+section{
+background:white;
+max-width:950px;
+margin:30px auto;
+padding:30px;
+border-radius:15px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+opacity:0;
+transform:translateY(40px);
+transition:all 0.6s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ---------------- SKILLS CARDS ---------------- */
+.skills-grid{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
+}
+
+.skill{
+background:#eaf3ff;
+color:#0A66C2;
+padding:10px 15px;
+border-radius:20px;
+font-size:13px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.skill:hover{
+background:#0A66C2;
+color:white;
+transform:translateY(-3px);
+}
+
+/* ---------------- PROJECT CARDS ---------------- */
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+margin-top:15px;
+}
+
+.card{
+background:#f9fbff;
+border-left:4px solid #0A66C2;
+padding:18px;
+border-radius:10px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+background:white;
+}
+
+/* ---------------- CONTACT ---------------- */
 a{
 color:#0A66C2;
 text-decoration:none;
@@ -65,6 +133,7 @@ a:hover{
 text-decoration:underline;
 }
 
+/* ---------------- FOOTER ---------------- */
 footer{
 background:#0A66C2;
 color:white;
@@ -73,8 +142,13 @@ padding:20px;
 margin-top:30px;
 }
 
-</style>
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes fadeDown{
+from{opacity:0; transform:translateY(-30px);}
+to{opacity:1; transform:translateY(0);}
+}
 
+</style>
 </head>
 
 <body>
@@ -82,197 +156,104 @@ margin-top:30px;
 <header>
 <h1>Priyanka Singh</h1>
 <h2>Aspiring Business Analyst</h2>
-<p>Business Analytics | Data Analytics | Excel | Power BI | Business Reporting</p>
+
+<div>
+<span class="badge">Excel</span>
+<span class="badge">Power BI</span>
+<span class="badge">Business Reporting</span>
+<span class="badge">KPI Tracking</span>
+<span class="badge">Data Analytics</span>
+</div>
 </header>
 
-<section>
+<section class="reveal">
 <h2>About Me</h2>
 <p>
-I am a B.Com (Hons.) graduate from the University of Delhi with a strong interest in Business Analytics, Data Analytics, and Business Reporting. I specialize in using Excel and Power BI to analyze data, build dashboards, and generate meaningful insights for decision-making.
-
-I enjoy solving business problems using data and transforming raw information into structured reports and dashboards. I am currently seeking entry-level roles in Business Analyst, Data Analyst, and Business Operations domains.
+B.Com (Hons.) graduate from the University of Delhi with strong exposure to business analytics and reporting.
+I specialize in converting raw data into structured insights using Excel and Power BI, focusing on KPI tracking,
+dashboard development, and business performance analysis.
 </p>
 </section>
 
-<section>
+<section class="reveal">
 <h2>Skills</h2>
-<ul>
-<li>Microsoft Excel (VLOOKUP, Pivot Tables, Power Query, Filters, Slicers)</li>
-<li>Power BI</li>
-<li>Business Analytics</li>
-<li>Data Analytics</li>
-<li>Business Reporting</li>
-<li>Dashboard Development</li>
-<li>Data Visualization</li>
-<li>Documentation (BRD & FRD)</li>
-<li>Problem Solving</li>
-</ul>
+<div class="skills-grid">
+
+<div class="skill">Excel (Pivot, VLOOKUP)</div>
+<div class="skill">Power BI</div>
+<div class="skill">KPI Tracking</div>
+<div class="skill">Data Visualization</div>
+<div class="skill">Business Reporting</div>
+<div class="skill">Dashboard Development</div>
+<div class="skill">Data Cleaning</div>
+<div class="skill">PowerPoint Reporting</div>
+<div class="skill">BRD & FRD Documentation</div>
+
+</div>
 </section>
 
-<section>
+<section class="reveal">
 <h2>Projects</h2>
-<ul>
-<li>HR Recruitment Analytics Dashboard (Power BI)</li>
-<li>Sales Dashboard (Excel)</li>
-<li>Business Reporting Dashboard</li>
-<li>HR Analytics Dashboard</li>
-</ul>
+
+<div class="project-grid">
+
+<div class="card">
+<strong>Bank Loan Dashboard</strong><br>
+Tracked 14.4K+ loans, $169M funded, KPI reporting, risk analysis.
+</div>
+
+<div class="card">
+<strong>Blinkit Sales Dashboard</strong><br>
+$1.20M sales analysis across categories & outlets using Power BI.
+</div>
+
+<div class="card">
+<strong>HR Attrition Analysis</strong><br>
+12.64% attrition tracking with workforce risk segmentation.
+</div>
+
+<div class="card">
+<strong>Business Reporting Dashboard</strong><br>
+KPI-based executive reporting for decision making.
+</div>
+
+</div>
+
 </section>
 
-<section>
+<section class="reveal">
 <h2>Certifications</h2>
 <ul>
-<li>GE Aerospace Human Resources Job Simulation (Forage)</li>
+<li>GE Aerospace HR Job Simulation (Forage)</li>
 <li>IBM Analytics Courses</li>
-<li>Business Analytics Learning Projects</li>
+<li>Deloitte & Tata Data Analytics Simulations</li>
 </ul>
 </section>
 
-<section>
+<section class="reveal">
 <h2>Contact</h2>
-
-<p><strong>Email:</strong><br>
-<a href="mailto:priyankasingh020911@gmail.com">
-priyankasingh020911@gmail.com
-</a></p>
-
-<p><strong>LinkedIn:</strong><br>
-<a href="https://www.linkedin.com/in/priyankasingh-analyst" target="_blank">
-linkedin.com/in/priyankasingh-analyst
-</a></p>
-
-<p><strong>GitHub:</strong><br>
-<a href="https://github.com/priyankasingh-analyst" target="_blank">
-github.com/priyankasingh-analyst
-</a></p>
-
+<p>Email: <a href="mailto:priyankasingh020911@gmail.com">priyankasingh020911@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/priyankasingh-analyst" target="_blank">Profile</a></p>
+<p>GitHub: <a href="https://github.com/priyankasingh-analyst" target="_blank">Profile</a></p>
 </section>
 
 <footer>
-<p>© 2026 Priyanka Singh</p>
-<p>Designed using HTML & CSS | Hosted on GitHub Pages</p>
+© 2026 Priyanka Singh | Interactive Portfolio
 </footer>
 
-</body>
-</html>
-<p>
+<script>
+// Scroll animation
+const sections = document.querySelectorAll('.reveal');
 
-I am a B.Com (Hons.) graduate from the University of Delhi with a strong interest in Business Analytics, Data Analytics and Business Reporting.
-
-I am skilled in Excel, Power BI, SQL and documentation (BRD & FRD). I enjoy solving business problems using data and creating dashboards that support better decision-making.
-
-Currently, I am actively looking for Business Analyst, Data Analyst and Business Operations roles.
-
-</p>
-
-</section>
-
-<section>
-
-<h2>Skills</h2>
-
-<ul>
-
-<li>Microsoft Excel</li>
-
-<li>Power BI</li>
-
-<li>SQL</li>
-
-<li>Business Analytics</li>
-
-<li>Data Analytics</li>
-
-<li>Business Reporting</li>
-
-<li>Dashboard Development</li>
-
-<li>Data Visualization</li>
-
-<li>Documentation (BRD & FRD)</li>
-
-<li>Problem Solving</li>
-
-</ul>
-
-</section>
-
-<section>
-
-<h2>Projects</h2>
-
-<ul>
-
-<li>HR Recruitment Analytics Dashboard (Power BI)</li>
-
-<li>Sales Dashboard (Excel)</li>
-
-<li>Business Reporting Dashboard</li>
-
-<li>HR Analytics Dashboard</li>
-
-</ul>
-
-</section>
-
-<section>
-
-<h2>Certifications</h2>
-
-<ul>
-
-<li>GE Aerospace Human Resources Job Simulation (Forage)</li>
-
-<li>IBM Analytics Courses</li>
-
-<li>Business Analytics Learning Projects</li>
-
-</ul>
-
-</section>
-
-<section>
-
-<h2>Contact</h2>
-
-<p>
-<strong>Email:</strong><br>
-<a href="mailto:priyankasingh020911@gmail.com">
-priyankasingh020911@gmail.com
-</a>
-</p>
-
-<p>
-<strong>LinkedIn:</strong><br>
-
-<a href="https://www.linkedin.com/in/priyankasingh-analyst" target="_blank">
-
-linkedin.com/in/priyankasingh-analyst
-
-</a>
-
-</p>
-
-<p>
-<strong>GitHub:</strong><br>
-
-<a href="https://github.com/priyankasingh-analyst" target="_blank">
-
-github.com/priyankasingh-analyst
-
-</a>
-
-</p>
-
-</section>
-
-<footer>
-
-<p>© 2026 Priyanka Singh</p>
-
-<p>Designed using HTML & CSS | Hosted on GitHub Pages</p>
-
-</footer>
+window.addEventListener('scroll', () => {
+sections.forEach(sec => {
+const top = sec.getBoundingClientRect().top;
+if(top < window.innerHeight - 100){
+sec.classList.add('show');
+}
+});
+});
+</script>
 
 </body>
-</html> 
+  </html>
