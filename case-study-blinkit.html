@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: Blinkit E-Commerce Sales Dashboard — Priyanka Singh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-mark">Priyanka<span>.</span></a>
+    <a href="index.html#projects" class="back-link">← Back to projects</a>
+  </div>
+</header>
+
+<main>
+  <section class="cs-hero">
+    <div class="wrap">
+      <p class="cs-eyebrow mono">Case Study · Retail &amp; Sales Analytics</p>
+      <h1>Blinkit E-Commerce Sales Dashboard</h1>
+      <p class="cs-tools">Excel · Power BI · DAX</p>
+      <div class="cs-kpis">
+        <span class="cs-kpi">$1.20M total sales</span>
+        <span class="cs-kpi">8,523 items</span>
+        <span class="cs-kpi">141 avg sales/item</span>
+        <span class="cs-kpi">3.9 avg rating</span>
+        <span class="cs-kpi">Tier 3 = $472K</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="cs-section-tag">Business Problem</span>
+      <h2>Sales were strong, but nobody knew where they were coming from</h2>
+      <p>Blinkit's retail network spans outlets of different sizes, tiers, and formats — from small grocery stores to large supermarkets. With $1.20M in sales spread across 8,523 items, leadership needed to know which outlet types, sizes, and product categories were actually driving revenue, and whether the network's footprint matched where demand was strongest.</p>
+      <p>Without this breakdown, decisions about restocking, outlet investment, and category focus were being made on gut feel rather than on where the sales were concentrated.</p>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="cs-section-tag">Approach</span>
+      <h2>From item-level data to an outlet strategy view</h2>
+      <ol class="cs-steps">
+        <li><div><strong>Consolidated the item and outlet dataset.</strong> Structured sales records for 8,523 items across outlet location, size, and establishment year.</div></li>
+        <li><div><strong>Cleaned fat-content and item-type fields.</strong> Standardized inconsistent labels (e.g. "Low Fat" vs. "LF") across item categories like Fruits &amp; Vegetables, Snack Foods, and Household.</div></li>
+        <li><div><strong>Built DAX measures for core KPIs.</strong> Calculated total sales ($1.20M), average sales per item (141), and average customer rating (3.9) as headline metrics.</div></li>
+        <li><div><strong>Segmented by outlet size and location tier.</strong> Broke down the $1.20M in sales across Small, Medium, and High outlet sizes, and across Tier 1, 2, and 3 locations.</div></li>
+        <li><div><strong>Analyzed outlet establishment trends over time.</strong> Tracked sales performance by the year each outlet was established, from 2012 through 2022, to see if newer or older outlets performed better.</div></li>
+        <li><div><strong>Compared outlet types side by side.</strong> Built a summary table contrasting Supermarket Type 1, Type 2, Type 3, and Grocery Store on total sales, item count, average rating, and item visibility.</div></li>
+        <li><div><strong>Added a filter panel.</strong> Enabled slicing by outlet location, outlet size, and item type so stakeholders could explore the data without needing a new report each time.</div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cs-section">
+    <div class="wrap">
+      <span class="cs-section-tag">Key Insights</span>
+      <h2>What the numbers showed</h2>
+      <div class="cs-insights">
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">Tier 3 = $472.1K</span>
+          <p>Tier 3 outlets generated the highest total sales of any location tier, ahead of Tier 2 ($393.2K) and Tier 1 ($336.4K) combined share.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">Grocery Store: $151.9K</span>
+          <p>Grocery Store led total sales among outlet types at $151,939, narrowly ahead of Supermarket Type 2 ($131,477) despite carrying fewer items than Type 1.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">High-size outlets: $507.9K</span>
+          <p>Outlets classified as "High" size outsold Medium ($248.99K) by roughly 2x, showing store footprint has a real, not marginal, effect on revenue.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">Fruits &amp; Veg + Snacks lead</span>
+          <p>Fruits &amp; Vegetables and Snack Foods were the top two item types by sales, each contributing $0.18M — well ahead of categories like Seafood or Breakfast.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">2018 peak: $205K</span>
+          <p>Outlets established around 2018 recorded a sharp sales peak compared to outlets established in surrounding years, an anomaly worth investigating further.</p>
+        </div>
+        <div class="cs-insight-card">
+          <span class="cs-insight-num">3.9 / 5 avg rating</span>
+          <p>Customer ratings stayed consistently high across nearly all outlet types, suggesting sales differences are driven by location and format, not service quality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section" style="border-bottom:none;">
+    <div class="wrap">
+      <span class="cs-section-tag">Recommendations</span>
+      <h2>What the business should do next</h2>
+      <ul class="cs-reco-list">
+        <li>Prioritize expansion or replication of the Tier 3 outlet model, since it's outperforming Tier 1 despite Tier 1 typically being seen as the premium/priority tier.</li>
+        <li>Double down on Fruits &amp; Vegetables and Snack Foods inventory and shelf space, since they consistently outsell every other item category.</li>
+        <li>Investigate the 2018 outlet-establishment sales spike to identify what drove it — new store format, location choice, or a market condition — and replicate it where possible.</li>
+        <li>Since customer ratings are uniformly high (3.9 avg) across outlet types, treat sales gaps as a placement and assortment problem rather than a service-quality one.</li>
+        <li>Reassess "High" size outlet investment, since they outsell Medium outlets 2x — the current small footprint of high-size stores may be leaving revenue on the table.</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="cs-footer-nav wrap">
+    <a href="case-study-loans.html" class="btn btn-ghost">← Previous case study</a>
+    <a href="case-study-attrition.html" class="btn btn-primary">Next case study →</a>
+  </div>
+</main>
+
+</body>
+</html>
+
