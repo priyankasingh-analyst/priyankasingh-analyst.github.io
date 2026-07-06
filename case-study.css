@@ -256,6 +256,20 @@ header.site-nav {
   font-weight: 700;
 }
 
+.cs-dashboard-img {
+  margin-top: 40px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.cs-dashboard-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Footer nav */
 .cs-footer-nav {
   padding: 48px 0 80px;
@@ -289,4 +303,3 @@ header.site-nav {
   .cs-steps li { grid-template-columns: 36px 1fr; }
   .cs-footer-nav { flex-direction: column; align-items: flex-start; }
 }
-
