@@ -3,249 +3,1022 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Priyanka Singh | Analyst Portfolio</title>
-
+<title>Priyanka Singh — Aspiring Business Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f4f6f9;
-color:#333;
-scroll-behavior:smooth;
-}
+  :root {
+    --ink: #0F1E17;
+    --paper: #F7F5F0;
+    --paper-dim: #EFEBE1;
+    --forest: #1B4332;
+    --forest-light: #2D6A4F;
+    --gold: #C9A857;
+    --sage: #5A6B63;
+    --line: #D9D3C4;
+    --radius: 3px;
+  }
 
-h2{
-color:#0A66C2;
-border-bottom:2px solid #0A66C2;
-display:inline-block;
-padding-bottom:5px;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ---------------- HEADER ---------------- */
-header{
-background:linear-gradient(135deg,#0A66C2,#083d77);
-color:white;
-text-align:center;
-padding:70px 20px;
-animation:fadeDown 1s ease;
-}
+  html { scroll-behavior: smooth; }
 
-header h1{
-font-size:46px;
-margin:0;
-}
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
 
-header h2{
-font-weight:400;
-margin-top:10px;
-}
+  a { color: inherit; text-decoration: none; }
 
-.badge{
-display:inline-block;
-background:rgba(255,255,255,0.15);
-padding:6px 12px;
-border-radius:20px;
-margin:5px;
-font-size:12px;
-transition:0.3s;
-}
+  ::selection { background: var(--gold); color: var(--ink); }
 
-.badge:hover{
-transform:scale(1.1);
-background:white;
-color:#0A66C2;
-}
+  .mono {
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.02em;
+  }
 
-section{
-background:white;
-max-width:950px;
-margin:30px auto;
-padding:30px;
-border-radius:15px;
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
-opacity:0;
-transform:translateY(40px);
-transition:all 0.6s ease;
-}
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
 
-section.show{
-opacity:1;
-transform:translateY(0);
-}
+  /* ===== Skip link / focus ===== */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--forest-light);
+    outline-offset: 3px;
+  }
 
-.skills-grid{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:15px;
-}
+  /* ===== Nav ===== */
+  header.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(247, 245, 240, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
 
-.skill{
-background:#eaf3ff;
-color:#0A66C2;
-padding:10px 15px;
-border-radius:20px;
-font-size:13px;
-transition:0.3s;
-cursor:pointer;
-}
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 32px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
 
-.skill:hover{
-background:#0A66C2;
-color:white;
-transform:translateY(-3px);
-}
+  .nav-mark {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+  }
 
-.project-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-margin-top:15px;
-}
+  .nav-mark span {
+    color: var(--forest);
+  }
 
-.card{
-background:#f9fbff;
-border-left:4px solid #0A66C2;
-padding:18px;
-border-radius:10px;
-transition:0.3s;
-cursor:pointer;
-}
+  nav.nav-links {
+    display: flex;
+    gap: 28px;
+  }
 
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-background:white;
-}
+  nav.nav-links a {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: var(--sage);
+    transition: color 0.2s ease;
+  }
 
-a{
-color:#0A66C2;
-text-decoration:none;
-}
+  nav.nav-links a:hover { color: var(--forest); }
 
-a:hover{
-text-decoration:underline;
-}
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px;
+  }
+  .nav-toggle span {
+    width: 22px;
+    height: 2px;
+    background: var(--ink);
+    display: block;
+  }
 
-footer{
-background:#0A66C2;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:30px;
-}
+  /* ===== Hero — report cover ===== */
+  .hero {
+    padding: 88px 0 0;
+    position: relative;
+  }
 
-@keyframes fadeDown{
-from{opacity:0; transform:translateY(-30px);}
-to{opacity:1; transform:translateY(0);}
-}
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--forest);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
 
+  .hero-eyebrow::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    line-height: 1.03;
+    letter-spacing: -0.02em;
+    max-width: 780px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--forest);
+  }
+
+  .hero-sub {
+    margin-top: 24px;
+    max-width: 560px;
+    font-size: 1.08rem;
+    color: #3A453F;
+  }
+
+  .hero-actions {
+    margin-top: 34px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 26px;
+    border-radius: var(--radius);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .btn-primary:hover { background: var(--forest); }
+
+  .btn-ghost {
+    border-color: var(--ink);
+    color: var(--ink);
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--paper); }
+
+  /* KPI ticker — the signature element */
+  .kpi-strip {
+    margin-top: 72px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--ink);
+  }
+
+  .kpi-inner {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .kpi-cell {
+    padding: 28px 24px;
+    border-right: 1px solid rgba(247,245,240,0.12);
+    color: var(--paper);
+  }
+  .kpi-cell:last-child { border-right: none; }
+
+  .kpi-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--gold);
+    display: block;
+  }
+
+  .kpi-label {
+    margin-top: 6px;
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #B9C4BC;
+  }
+
+  /* ===== Section shell ===== */
+  section {
+    padding: 96px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .section-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--gold);
+    background: var(--ink);
+    padding: 4px 10px;
+    border-radius: var(--radius);
+    white-space: nowrap;
+  }
+
+  .section-head h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* ===== About ===== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 56px;
+  }
+
+  .about-grid p {
+    font-size: 1.05rem;
+    color: #333f39;
+    margin-bottom: 18px;
+    max-width: 62ch;
+  }
+
+  .fact-list {
+    border-left: 2px solid var(--forest);
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .fact-list dt {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--sage);
+    font-weight: 600;
+  }
+
+  .fact-list dd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    margin-top: 4px;
+  }
+
+  /* ===== Skills ===== */
+  .skills-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .skill-card {
+    background: var(--paper);
+    padding: 26px 24px;
+  }
+
+  .skill-card h3 {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--forest);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .skill-card ul { list-style: none; }
+
+  .skill-card li {
+    font-size: 0.94rem;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--line);
+    display: flex;
+    justify-content: space-between;
+  }
+  .skill-card li:last-child { border-bottom: none; }
+
+  .skill-card li::after {
+    content: '●';
+    font-size: 0.5rem;
+    color: var(--gold);
+    align-self: center;
+  }
+
+  /* ===== Projects ===== */
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+
+  .project-row {
+    background: var(--paper);
+    padding: 36px 32px;
+    transition: background 0.2s ease;
+  }
+
+  .project-row:hover {
+    background: var(--paper-dim);
+  }
+
+  .project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .project-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .project-tools {
+    margin-top: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--forest);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .project-metrics {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .project-metric {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--ink);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 7px 12px;
+    border-radius: var(--radius);
+    white-space: nowrap;
+  }
+
+  .project-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .project-stage dt {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--gold);
+    background: var(--ink);
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+  }
+
+  .project-stage dd {
+    font-size: 0.92rem;
+    color: #3A453F;
+    line-height: 1.55;
+  }
+
+  .case-link {
+    display: inline-block;
+    margin-top: 22px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--forest);
+    border-bottom: 1px solid var(--forest);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .case-link:hover {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+
+  /* ===== Experience ===== */
+  .exp-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 32px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .exp-item:last-child { border-bottom: none; }
+
+  .exp-period {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--sage);
+  }
+
+  .exp-role {
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+
+  .exp-org {
+    font-size: 0.92rem;
+    color: var(--forest);
+    margin-bottom: 12px;
+  }
+
+  .exp-item ul {
+    padding-left: 18px;
+  }
+  .exp-item li {
+    font-size: 0.93rem;
+    color: #3A453F;
+    margin-bottom: 6px;
+  }
+
+  /* ===== Certifications ===== */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .cert-card {
+    border: 1px solid var(--line);
+    padding: 20px 22px;
+    border-radius: var(--radius);
+    background: var(--paper);
+  }
+
+  .cert-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cert-card .cert-index {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    background: var(--ink);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: var(--radius);
+    margin-bottom: 4px;
+    width: fit-content;
+  }
+
+  .cert-card p { font-size: 0.92rem; font-weight: 500; line-height: 1.4; }
+
+  .cert-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+  }
+
+  .cert-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--sage);
+  }
+
+  .cert-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--forest);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .cert-link:hover { color: var(--ink); }
+
+  /* ===== Contact / Footer ===== */
+  footer {
+    padding: 80px 0 40px;
+  }
+
+  .contact-block h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    letter-spacing: -0.02em;
+    max-width: 600px;
+  }
+
+  .contact-block p {
+    margin-top: 16px;
+    color: var(--sage);
+    max-width: 480px;
+  }
+
+  .contact-links {
+    margin-top: 36px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .contact-links a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    padding: 12px 20px;
+    border: 1px solid var(--ink);
+    border-radius: var(--radius);
+    transition: all 0.2s ease;
+  }
+  .contact-links a:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .footer-bottom {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--sage);
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* ===== Reveal on scroll ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 860px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .skills-board { grid-template-columns: 1fr 1fr; }
+    .kpi-inner { grid-template-columns: 1fr 1fr; }
+    .kpi-cell:nth-child(2) { border-right: none; }
+    .kpi-cell { border-bottom: 1px solid rgba(247,245,240,0.12); }
+    .project-body { grid-template-columns: 1fr; gap: 18px; }
+    .exp-item { grid-template-columns: 1fr; gap: 8px; }
+  }
+
+  @media (max-width: 640px) {
+    .wrap, .nav-inner { padding-left: 20px; padding-right: 20px; }
+    nav.nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); flex-direction: column; padding: 20px; border-bottom: 1px solid var(--line); gap: 18px; }
+    nav.nav-links.open { display: flex; }
+    .nav-toggle { display: flex; }
+    .skills-board { grid-template-columns: 1fr; }
+    section { padding: 64px 0; }
+    .contact-block h2 { font-size: 1.8rem; }
+  }
 </style>
 </head>
-
 <body>
 
-<header>
-<h1>Priyanka Singh</h1>
-<h2>Aspiring Business Analyst</h2>
-
-<div>
-<span class="badge">Excel</span>
-<span class="badge">Power BI</span>
-<span class="badge">Business Reporting</span>
-<span class="badge">KPI Tracking</span>
-<span class="badge">Data Analytics</span>
-</div>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-mark">Priyanka<span>.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
-<section class="reveal">
-<h2>About Me</h2>
-<p>
-B.Com (Hons.) graduate from the University of Delhi with strong exposure to business analytics and reporting.
-I specialize in converting raw data into structured insights using Excel and Power BI, focusing on KPI tracking,
-dashboard development, and business performance analysis.
-</p>
-</section>
+<main id="top">
 
-<section class="reveal">
-<h2>Skills</h2>
-<div class="skills-grid">
+  <!-- HERO -->
+  <section class="hero" style="border-bottom:none; padding-bottom:0;">
+    <div class="wrap">
+      <p class="hero-eyebrow mono">Reporting &amp; Business Analytics</p>
+      <h1>Turning raw business data into <em>reports people act on.</em></h1>
+      <p class="hero-sub">I'm Priyanka Singh, a B.Com (Hons.) graduate from the University of Delhi. I build dashboards, track KPIs, and validate data so stakeholders can make decisions with confidence — actively seeking Business Analyst, Data Analyst, and Associate Analyst roles.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View my dashboards</a>
+        <a href="mailto:priyankasingh020911@gmail.com" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
 
-<div class="skill">Excel (Pivot, VLOOKUP)</div>
-<div class="skill">Power BI</div>
-<div class="skill">KPI Tracking</div>
-<div class="skill">Data Visualization</div>
-<div class="skill">Business Reporting</div>
-<div class="skill">Dashboard Development</div>
-<div class="skill">Data Cleaning</div>
-<div class="skill">PowerPoint Reporting</div>
-<div class="skill">BRD & FRD Documentation</div>
+    <div class="kpi-strip">
+      <div class="kpi-inner">
+        <div class="kpi-cell">
+          <span class="kpi-num">8.82</span>
+          <span class="kpi-label">CGPA, B.Com (Hons.)</span>
+        </div>
+        <div class="kpi-cell">
+          <span class="kpi-num">3</span>
+          <span class="kpi-label">End-to-end dashboards built</span>
+        </div>
+        <div class="kpi-cell">
+          <span class="kpi-num">8+</span>
+          <span class="kpi-label">Analytics certifications earned</span>
+        </div>
+        <div class="kpi-cell">
+          <span class="kpi-num">2 yrs</span>
+          <span class="kpi-label">Team leadership experience</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">01 / Profile</span>
+        <h2>About me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>I graduated with a B.Com (Hons.) from Bharati College, University of Delhi, with a strong foundation in business reporting, governance, and operational data analysis. I'm proficient in Excel — VLOOKUP, Pivot Tables, Power Query, filters, and slicers — and in Power BI for building dashboards that hold up under real stakeholder scrutiny.</p>
+          <p>Across academic projects and industry simulations, I've collected, validated, and organized data from multiple sources, then converted it into structured reports and visualizations. I care about accuracy and timeliness in equal measure, and I'm comfortable adapting quickly as priorities shift.</p>
+          <p>Outside of coursework, I've led research teams, run a peer helpdesk for 500+ students, and tracked performance metrics across PR and outreach campaigns — all of it built on the same habit: turning messy, unstructured information into something clear enough to act on.</p>
+        </div>
+        <dl class="fact-list reveal">
+          <div>
+            <dt>Based in</dt>
+            <dd>Gurugram, Haryana, India</dd>
+          </div>
+          <div>
+            <dt>Education</dt>
+            <dd>B.Com (Hons.), University of Delhi — CGPA 8.82</dd>
+          </div>
+          <div>
+            <dt>What I bring</dt>
+            <dd>Fresh eyes, sharp with Excel &amp; Power BI, ready to ship from day one</dd>
+          </div>
+          <div>
+            <dt>Core tools</dt>
+            <dd>Excel · Power BI · Power Query</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
 
-<section class="reveal">
-<h2>Projects</h2>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">02 / Toolkit</span>
+        <h2>Skills</h2>
+      </div>
+      <div class="skills-board reveal">
+        <div class="skill-card">
+          <h3>Analytical tools</h3>
+          <ul>
+            <li>MS Excel (Advanced)</li>
+            <li>Power BI &amp; DAX</li>
+            <li>Power Query</li>
+            <li>Google Sheets</li>
+            <li>PowerPoint</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Reporting skills</h3>
+          <ul>
+            <li>KPI Monitoring</li>
+            <li>Data Validation</li>
+            <li>Dashboard Development</li>
+            <li>MIS Reporting</li>
+            <li>Documentation (BRD &amp; FRD)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Working style</h3>
+          <ul>
+            <li>Attention to Detail</li>
+            <li>Problem Solving</li>
+            <li>Adaptability to Change</li>
+            <li>Time Management</li>
+            <li>Team Collaboration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="project-grid">
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">03 / Live dashboards</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="project-list reveal">
 
-<div class="card">
-<strong>Bank Loan Dashboard</strong><br>
-Tracked 14.4K+ loans, $169M funded, KPI reporting, risk analysis.
-</div>
+        <div class="project-row">
+          <div class="project-top">
+            <div>
+              <div class="project-name">Bank Loan Applications Dashboard</div>
+              <div class="project-tools">Excel · Pivot Tables · Power Query</div>
+            </div>
+            <div class="project-metrics">
+              <span class="project-metric">14.4K applications</span>
+              <span class="project-metric">$169M funded</span>
+              <span class="project-metric">84% good loan rate</span>
+            </div>
+          </div>
+          <dl class="project-body">
+            <div class="project-stage">
+              <dt>Problem</dt>
+              <dd>Loan operations teams needed a single view of application volume, funding outcomes, and risk exposure to track performance week over week.</dd>
+            </div>
+            <div class="project-stage">
+              <dt>Approach</dt>
+              <dd>Cleaned and structured 14.4K loan records in Excel, then used Pivot Tables and Power Query to segment applications by grade, purpose, term, employment length, and state.</dd>
+            </div>
+            <div class="project-stage">
+              <dt>Result</dt>
+              <dd>Published a KPI dashboard showing an 84% good loan rate against 12.30% average interest and 13.35% average debt-to-income, giving stakeholders a clear read on portfolio health.</dd>
+            </div>
+          </dl>
+          <a class="case-link" href="case-study-loans.html">Read full case study →</a>
+        </div>
 
-<div class="card">
-<strong>Blinkit Sales Dashboard</strong><br>
-$1.20M sales analysis across categories & outlets using Power BI.
-</div>
+        <div class="project-row">
+          <div class="project-top">
+            <div>
+              <div class="project-name">Blinkit E-Commerce Sales Dashboard</div>
+              <div class="project-tools">Excel · Power BI · DAX</div>
+            </div>
+            <div class="project-metrics">
+              <span class="project-metric">$1.20M total sales</span>
+              <span class="project-metric">8,523 items</span>
+              <span class="project-metric">3.9 avg rating</span>
+            </div>
+          </div>
+          <dl class="project-body">
+            <div class="project-stage">
+              <dt>Problem</dt>
+              <dd>Leadership needed visibility into which outlet types, sizes, and product categories were actually driving sales across Blinkit's retail network.</dd>
+            </div>
+            <div class="project-stage">
+              <dt>Approach</dt>
+              <dd>Built DAX measures in Power BI to break down sales by outlet tier, size, and item type across 8,523 items, with a filter panel for on-demand slicing.</dd>
+            </div>
+            <div class="project-stage">
+              <dt>Result</dt>
+              <dd>Surfaced that Tier 3 outlets generated the highest revenue ($472K) despite not being the largest format, reframing where the business should focus expansion.</dd>
+            </div>
+          </dl>
+          <a class="case-link" href="case-study-blinkit.html">Read full case study →</a>
+        </div>
 
-<div class="card">
-<strong>HR Attrition Analysis</strong><br>
-12.64% attrition tracking with workforce risk segmentation.
-</div>
+        <div class="project-row">
+          <div class="project-top">
+            <div>
+              <div class="project-name">Employee Attrition Analysis</div>
+              <div class="project-tools">Excel · Power BI · DAX</div>
+            </div>
+            <div class="project-metrics">
+              <span class="project-metric">12.64% attrition rate</span>
+              <span class="project-metric">137 exits</span>
+              <span class="project-metric">1K employees</span>
+            </div>
+          </div>
+          <dl class="project-body">
+            <div class="project-stage">
+              <dt>Problem</dt>
+              <dd>HR lacked a clear picture of which departments, roles, and employee segments were most at risk of attrition, making retention planning reactive rather than targeted.</dd>
+            </div>
+            <div class="project-stage">
+              <dt>Approach</dt>
+              <dd>Structured a 1K-employee dataset in Power BI, building attrition breakdowns by department, job role, tenure, work-life balance, and business travel frequency.</dd>
+            </div>
+            <div class="project-stage">
+              <dt>Result</dt>
+              <dd>Identified Sales Executives as the single highest-risk role (46 exits) and flagged frequent travel and low work-life balance scores as recurring attrition drivers.</dd>
+            </div>
+          </dl>
+          <a class="case-link" href="case-study-attrition.html">Read full case study →</a>
+        </div>
 
-<div class="card">
-<strong>Business Reporting Dashboard</strong><br>
-KPI-based executive reporting for decision making.
-</div>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">04 / Track record</span>
+        <h2>Experience</h2>
+      </div>
+      <div class="reveal">
+        <div class="exp-item">
+          <div class="exp-period">Aug 2025 – Apr 2026</div>
+          <div>
+            <div class="exp-role">Research &amp; Development Head</div>
+            <div class="exp-org">Vitt 'N' Nivesh, Bharati College, University of Delhi</div>
+            <ul>
+              <li>Led a structured research workflow for a team of 5–7, from defining research questions to producing written outputs.</li>
+              <li>Introduced a quality-control system with checkpoints at data collection, drafting, and review stages, reducing revision cycles.</li>
+              <li>Mentored junior members on research methodology and source evaluation.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-period">Sept 2024 – Apr 2026</div>
+          <div>
+            <div class="exp-role">Student NEP Saarthi</div>
+            <div class="exp-org">Bharati College</div>
+            <ul>
+              <li>Appointed via the Principal's office to guide 50+ students through NEP 2020 course-selection decisions.</li>
+              <li>Maintained a structured helpdesk process for a 500+ student cohort across academic tracks.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-tag">05 / Credentials</span>
+        <h2>Certifications</h2>
+      </div>
+      <div class="cert-grid reveal">
+        <div class="cert-card">
+          <span class="cert-index">Forage</span>
+          <p>GE Aerospace — Explore Human Resources Job Simulation</p>
+          <div class="cert-meta">
+            <span class="cert-date">Jul 2026</span>
+            <a class="cert-link" href="https://www.theforage.com/completion-certificates/ay2tsYxaTif7Nt6z7/bAPubTkawzGexc6TT_ay2tsYxaTif7Nt6z7_695a4d94f76d215bcfd2c81d_1783082467438_completion_certificate.pdf" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-index">Forage</span>
+          <p>Tata — GenAI Powered Data Analytics Job Simulation</p>
+          <div class="cert-meta">
+            <span class="cert-date">May 2026</span>
+            <a class="cert-link" href="https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_695a4d94f76d215bcfd2c81d_1779069099591_completion_certificate.pdf" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-index">Novitech R&amp;D</span>
+          <p>30 Days MasterClass in Data Analytics</p>
+          <div class="cert-meta">
+            <span class="cert-date">Mar 2026</span>
+            <span class="cert-date">ID: NT_B39DAEE119</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-index">Forage</span>
+          <p>Deloitte Australia — Data Analytics Job Simulation</p>
+          <div class="cert-meta">
+            <span class="cert-date">Mar 2026</span>
+            <a class="cert-link" href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_695a4d94f76d215bcfd2c81d_1772684904843_completion_certificate.pdf" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-index">Cisco</span>
+          <p>Data Analytics Essentials</p>
+          <div class="cert-meta">
+            <span class="cert-date">Feb 2026</span>
+            <span class="cert-date">ID: 2d076130</span>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-index">HP LIFE</span>
+          <p>Data Science &amp; Analytics</p>
+          <div class="cert-meta">
+            <span class="cert-date">Feb 2026</span>
+            <a class="cert-link" href="https://www.life-global.org/certificate/89b80d7c-1727-48f4-83a2-049d3aeaee5f" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-index">AI ASCEND · Accenture</span>
+          <p>Exploratory Data Analysis — Level 2, AI Ready</p>
+          <div class="cert-meta">
+            <span class="cert-date">Feb 2026</span>
+            <a class="cert-link" href="https://dc523xlq.r.ap-southeast-1.awstrack.me/L0/https:%2F%2Ffsprimecertificate.s3-ap-southeast-1.amazonaws.com%2FPriyanka-priyankasingh022026@gmail.com-6741042.pdf/1/010e019c6abde9cf-951107e6-7e50-4582-9d02-744256616e20-000000/etwIpUHSDML-unfcXHxBCTHPLI0=250" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+        <div class="cert-card">
+          <span class="cert-index">SkillCourse</span>
+          <p>Power BI Micro Course</p>
+          <div class="cert-meta">
+            <span class="cert-date">2026</span>
+            <a class="cert-link" href="https://exam.skillcourse.in/student/view_certificate.php?uid=SC-FDBC05CE29" target="_blank" rel="noopener">View →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="reveal">
-<h2>Certifications</h2>
-<ul>
-<li>GE Aerospace HR Job Simulation (Forage)</li>
-<li>IBM Analytics Courses</li>
-<li>Deloitte & Tata Data Analytics Simulations</li>
-</ul>
-</section>
+  <!-- CONTACT -->
+  <footer id="contact">
+    <div class="wrap">
+      <div class="contact-block reveal">
+        <h2>Let's talk about your next report.</h2>
+        <p>I'm actively looking for Business Analyst, Data Analyst, and Associate Analyst roles. Reach out — I'd love to hear about what you're building.</p>
+        <div class="contact-links">
+          <a href="mailto:priyankasingh020911@gmail.com">priyankasingh020911@gmail.com</a>
+          <a href="tel:+919971394917">+91 9971394917</a>
+          <a href="https://www.linkedin.com/in/priyankasingh-analyst" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/priyankasingh-analyst" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Priyanka Singh</span>
+        <span>Gurugram, Haryana, India</span>
+      </div>
+    </div>
+  </footer>
 
-<section class="reveal">
-<h2>Contact</h2>
-<p>Email: <a href="mailto:priyankasingh020911@gmail.com">priyankasingh020911@gmail.com</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/priyankasingh-analyst" target="_blank">Profile</a></p>
-<p>GitHub: <a href="https://github.com/priyankasingh-analyst" target="_blank">Profile</a></p>
-</section>
-
-<footer>
-© 2026 Priyanka Singh | Interactive Portfolio
-</footer>
+</main>
 
 <script>
-// Scroll animation
-const sections = document.querySelectorAll('.reveal');
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', false);
+    });
+  });
 
-window.addEventListener('scroll', () => {
-sections.forEach(sec => {
-const top = sec.getBoundingClientRect().top;
-if(top < window.innerHeight - 100){
-sec.classList.add('show');
-}
-});
-});
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
 </script>
 
 </body>
-  </html>
+              </html> 
